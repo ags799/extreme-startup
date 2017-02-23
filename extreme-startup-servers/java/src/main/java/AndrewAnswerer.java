@@ -67,4 +67,12 @@ public class AndrewAnswerer {
             }
             return true;
     }
+
+    public static boolean questionIsFibonnaci(String realQuestion) {
+        return realQuestion.contains("number in the Fibonacci sequence");
+    }
+
+    public static String getQuestionIsFibonnaci(String realQuestion) {
+        return "1";
+    }
 }

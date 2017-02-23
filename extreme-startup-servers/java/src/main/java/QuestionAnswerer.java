@@ -19,6 +19,8 @@ public class QuestionAnswerer {
             return AndrewAnswerer.getQuestionIsSpainEuro();
         } else if (AndrewAnswerer.questionIsPrime(realQuestion)) {
             return AndrewAnswerer.getQuestionIsPrime(realQuestion);
+        } else if (AndrewAnswerer.questionIsFibonnaci(realQuestion)) {
+            return AndrewAnswerer.getQuestionIsFibonnaci(realQuestion);
         }
         return "";
     }
