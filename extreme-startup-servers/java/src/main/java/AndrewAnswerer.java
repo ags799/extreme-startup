@@ -6,7 +6,7 @@ public class AndrewAnswerer {
     }
 
     public static boolean questionIsLargest(String realQuestion) {
-        return realQuestion.contains("largest");
+        return realQuestion.startsWith("which of the following numbers is the largest: ");
     }
 
     public static String getQuestionIsLargest(String realQuestion) {
