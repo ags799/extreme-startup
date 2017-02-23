@@ -73,7 +73,13 @@ public class AndrewAnswerer {
     }
 
     public static String getQuestionIsFibonnaci(String realQuestion) {
-        return "1";
+        int n = Integer.parseInt(realQuestion.split("what is the ")[1].split("th number")[0]);
+        return "" + fibonacci(n);
+    }
+
+    public static long fibonacci(int n) {
+        if (n <= 1) return n;
+        else return fibonacci(n-1) + fibonacci(n-2);
     }
 
     public static boolean questionIsMinus(String realQuestion) {
