@@ -17,6 +17,8 @@ public class QuestionAnswerer {
             return AndrewAnswerer.getQuestionIsPrimeMinister(realQuestion);
         } else if (AndrewAnswerer.questionIsSpainEuro(realQuestion)) {
             return AndrewAnswerer.getQuestionIsSpainEuro();
+        } else if (AndrewAnswerer.questionIsPrime(realQuestion)) {
+            return AndrewAnswerer.getQuestionIsPrime(realQuestion);
         }
         return "";
     }

@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class AndrewAnswerer {
     private static String questionIsSpainEuro;
@@ -49,5 +50,21 @@ public class AndrewAnswerer {
 
     public static String getQuestionIsSpainEuro() {
         return "peseta";
+    }
+
+    public static boolean questionIsPrime(String realQuestion) {
+        return realQuestion.contains("which of the following numbers are primes: ");
+    }
+
+    public static String getQuestionIsPrime(String realQuestion) {
+        return Arrays.asList(realQuestion.split("which of the following numbers are primes: ")[1].split(", ")).stream().filter(i -> isPrime(Integer.parseInt(i))).collect(Collectors.toList()).toString();
+    }
+
+    private static boolean isPrime(int n) {
+            for(int i=2;i<n;i++) {
+                if(n%i==0)
+                    return false;
+            }
+            return true;
     }
 }
