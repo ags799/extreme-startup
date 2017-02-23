@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
@@ -107,6 +108,28 @@ public class AndrewAnswerer {
     }
 
     public static String plusMultiply(String realQuestion) {
-        return "";
+        String s = realQuestion.substring("what is ".length());
+        List<String> l = Arrays.asList(s.split(" "));
+        int sum = 0;
+        boolean isPlus = true;
+        for (String str : l) {
+            if (str.contains("by")) continue;
+            int i = 0;
+            try {
+                i = Integer.parseInt(str);
+            } catch (NumberFormatException e) {
+                if (str.contains("multiplied")) {
+                    isPlus = false;
+                } else {
+                    isPlus = true;
+                }
+            }
+            if (isPlus) {
+                sum += i;
+            } else {
+                sum *= i;
+            }
+        }
+        return "" + sum;
     }
 }

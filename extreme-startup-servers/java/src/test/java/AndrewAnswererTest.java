@@ -13,4 +13,10 @@ public final class AndrewAnswererTest {
     public void getQuestionIsLargest() throws Exception {
         assertThat(AndrewAnswerer.getQuestionIsLargest("which of the following numbers is the largest: 94, 379, 76, 822")).isEqualTo("822");
     }
+
+    @Test
+    public void plusMultiply() throws Exception {
+        assertThat(AndrewAnswerer.plusMultiply("what is 7 multiplied by 0 plus 19")).isEqualTo("" + 19);
+
+    }
 }
