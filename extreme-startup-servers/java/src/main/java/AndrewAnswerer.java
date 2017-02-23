@@ -2,6 +2,8 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class AndrewAnswerer {
+    private static String questionIsSpainEuro;
+
     public static String getName() {
         return "merlions";
     }
@@ -39,5 +41,13 @@ public class AndrewAnswerer {
 
     public static String getQuestionIsPrimeMinister(String realQuestion) {
         return "Theresa May";
+    }
+
+    public static boolean questionIsSpainEuro(String realQuestion) {
+        return Objects.equals("what currency did Spain use before the Euro", realQuestion);
+    }
+
+    public static String getQuestionIsSpainEuro() {
+        return "peseta";
     }
 }

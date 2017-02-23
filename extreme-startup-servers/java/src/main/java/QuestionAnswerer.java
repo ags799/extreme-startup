@@ -15,6 +15,8 @@ public class QuestionAnswerer {
             return AndrewAnswerer.getQuestionIsBondDrNo(realQuestion);
         } else if (AndrewAnswerer.questionIsPrimeMinister(realQuestion)) {
             return AndrewAnswerer.getQuestionIsPrimeMinister(realQuestion);
+        } else if (AndrewAnswerer.questionIsSpainEuro(realQuestion)) {
+            return AndrewAnswerer.getQuestionIsSpainEuro();
         }
         return "";
     }
