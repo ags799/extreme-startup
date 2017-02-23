@@ -73,8 +73,9 @@ public class AndrewAnswerer {
     }
 
     public static String getQuestionIsFibonnaci(String realQuestion) {
-        int n = Integer.parseInt(realQuestion.split("what is the ")[1].split("th number")[0]);
-        return "" + fibonacci(n);
+        String s = realQuestion.split("what is the ")[1].split(" number")[0];
+        int i = Integer.parseInt(s.substring(0, s.length() - 2));
+        return "" + fibonacci(i);
     }
 
     public static long fibonacci(int n) {
@@ -100,8 +101,12 @@ public class AndrewAnswerer {
     public static String threesome(String realQuestion) {
         int a = Integer.parseInt(realQuestion.split("what is ")[1].split(" plus")[0]);
         int b = Integer.parseInt(realQuestion.split(" plus ")[1].split(" plus ")[0]);
-        int c = Integer.parseInt(realQuestion.split("plus ")[1].split(" plus ")[1]);
+        int c = Integer.parseInt(realQuestion.split(" plus ")[2]);
         int s = a + b + c;
         return "" + s;
+    }
+
+    public static String plusMultiply(String realQuestion) {
+        return "";
     }
 }
