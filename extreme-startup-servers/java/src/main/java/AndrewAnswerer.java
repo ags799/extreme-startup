@@ -75,4 +75,19 @@ public class AndrewAnswerer {
     public static String getQuestionIsFibonnaci(String realQuestion) {
         return "1";
     }
+
+    public static boolean questionIsMinus(String realQuestion) {
+        return realQuestion.contains("what is") && realQuestion.contains("minus");
+    }
+
+    public static String getQuestionIsMinus(String realQuestion) {
+        int a = Integer.parseInt(realQuestion.split("what is ")[1].split(" ")[0]);
+        int b = Integer.parseInt(realQuestion.split(" minus ")[1]);
+        int d = a - b;
+        return "" + d;
+    }
+
+    public static boolean questionIsEiffel(String realQuestion) {
+        return Objects.equals(realQuestion, "which city is the Eiffel tower in");
+    }
 }

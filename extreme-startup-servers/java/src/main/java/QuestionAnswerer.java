@@ -21,6 +21,10 @@ public class QuestionAnswerer {
             return AndrewAnswerer.getQuestionIsPrime(realQuestion);
         } else if (AndrewAnswerer.questionIsFibonnaci(realQuestion)) {
             return AndrewAnswerer.getQuestionIsFibonnaci(realQuestion);
+        } else if (AndrewAnswerer.questionIsMinus(realQuestion)) {
+            return AndrewAnswerer.getQuestionIsMinus(realQuestion);
+        } else if (AndrewAnswerer.questionIsEiffel(realQuestion)) {
+            return "Paris";
         }
         return "";
     }
