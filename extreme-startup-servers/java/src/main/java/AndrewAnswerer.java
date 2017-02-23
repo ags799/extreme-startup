@@ -96,4 +96,12 @@ public class AndrewAnswerer {
     public static boolean questionIsEiffel(String realQuestion) {
         return Objects.equals(realQuestion, "which city is the Eiffel tower in");
     }
+
+    public static String threesome(String realQuestion) {
+        int a = Integer.parseInt(realQuestion.split("what is ")[1].split(" plus")[0]);
+        int b = Integer.parseInt(realQuestion.split(" plus ")[1].split(" plus ")[0]);
+        int c = Integer.parseInt(realQuestion.split("plus ")[1].split(" plus ")[1]);
+        int s = a + b + c;
+        return "" + s;
+    }
 }
