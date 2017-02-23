@@ -5,6 +5,8 @@ public class QuestionAnswerer {
         String realQuestion = getRealQuestion(question);
         if (Objects.equals(realQuestion, "what is your name")) {
             return AndrewAnswerer.getName();
+        } else if (AndrewAnswerer.questionIsLargest(realQuestion)) {
+            return AndrewAnswerer.getQuestionIsLargest(realQuestion);
         }
         return "";
     }
