@@ -13,5 +13,4 @@ public final class AndrewAnswererTest {
     public void getQuestionIsLargest() throws Exception {
         assertThat(AndrewAnswerer.getQuestionIsLargest("which of the following numbers is the largest: 94, 379, 76, 822")).isEqualTo("822");
     }
-
 }

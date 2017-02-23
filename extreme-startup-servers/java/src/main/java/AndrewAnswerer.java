@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Objects;
 
 public class AndrewAnswerer {
     public static String getName() {
@@ -22,5 +23,21 @@ public class AndrewAnswerer {
         int b = Integer.parseInt(realQuestion.split("multiplied by ")[1]);
         int p = a * b;
         return "" + p;
+    }
+
+    public static boolean questionIsBondDrNo(String realQuestion) {
+        return Objects.equals(realQuestion, "who played James Bond in the film Dr No");
+    }
+
+    public static String getQuestionIsBondDrNo(String realQuestion) {
+        return "Sean Connery";
+    }
+
+    public static boolean questionIsPrimeMinister(String realQuestion) {
+        return Objects.equals(realQuestion, "who is the Prime Minister of Great Britain");
+    }
+
+    public static String getQuestionIsPrimeMinister(String realQuestion) {
+        return "Theresa May";
     }
 }

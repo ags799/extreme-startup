@@ -11,6 +11,10 @@ public class QuestionAnswerer {
             return TimAnswerer.getQuestionIsAdd(realQuestion);
         } else if (AndrewAnswerer.questionIsMultiply(realQuestion)) {
             return AndrewAnswerer.getQuestionIsMultiply(realQuestion);
+        } else if (AndrewAnswerer.questionIsBondDrNo(realQuestion)) {
+            return AndrewAnswerer.getQuestionIsBondDrNo(realQuestion);
+        } else if (AndrewAnswerer.questionIsPrimeMinister(realQuestion)) {
+            return AndrewAnswerer.getQuestionIsPrimeMinister(realQuestion);
         }
         return "";
     }
