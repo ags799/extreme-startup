@@ -7,6 +7,8 @@ public class QuestionAnswerer {
             return AndrewAnswerer.getName();
         } else if (AndrewAnswerer.questionIsLargest(realQuestion)) {
             return AndrewAnswerer.getQuestionIsLargest(realQuestion);
+        } else if (TimAnswerer.questionIsAdd(realQuestion)) {
+            return TimAnswerer.getQuestionIsAdd(realQuestion));
         }
         return "";
     }
